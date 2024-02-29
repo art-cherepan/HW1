@@ -1,0 +1,15 @@
+{
+    "name": "artem/projects",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Cherepanov"
+        }
+    ],
+    "require": {}
+}
