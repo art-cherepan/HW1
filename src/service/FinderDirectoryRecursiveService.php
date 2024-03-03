@@ -9,13 +9,13 @@ class FinderDirectoryRecursiveService implements FinderServiceInterface
 {
     private const string START_DIRECTORY = __DIR__ . '/../resources';
     private const string FILE_NAME = 'count';
+
     public function find(): int
     {
         $recursiveDirIterator = new RecursiveDirectoryIterator(self::START_DIRECTORY);
         $recursiveIterator = new RecursiveIteratorIterator($recursiveDirIterator);
 
         $count = 0;
-
         foreach ($recursiveIterator as $item) {
             if ($item->isFile()
                 && $item->isReadable()
